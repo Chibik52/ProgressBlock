@@ -1,4 +1,139 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.ubuntu-regular {
+font-family: "Ubuntu", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.ubuntu-medium {
+font-family: "Ubuntu", sans-serif;
+font-weight: 500;
+font-style: normal;
+}
+
+.ubuntu-bold {
+font-family: "Ubuntu", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.ubuntu-light-italic {
+font-family: "Ubuntu", sans-serif;
+font-weight: 300;
+font-style: italic;
+}
+
+.ubuntu-regular-italic {
+font-family: "Ubuntu", sans-serif;
+font-weight: 400;
+font-style: italic;
+}
+
+.ubuntu-medium-italic {
+font-family: "Ubuntu", sans-serif;
+font-weight: 500;
+font-style: italic;
+}
+
+.ubuntu-bold-italic {
+font-family: "Ubuntu", sans-serif;
+font-weight: 700;
+font-style: italic;
+}  
+
+.progress-app {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    min-height: 100vh;
+}
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 6px;
+}
+.control [type="number"]::-webkit-inner-spin-button,
+.control input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+}
+.control input[type="number"]{
+    -moz-appearance: textfield;
+    border-radius: 50px;
+    border: 1px solid black;
+    text-align: center;
+    width: 60px;
+    height: 30px;
+}
+.slider-toggle{
+    display: flex;
+    align-items: center;
+}
+.slider-toggle__input{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider-toggle__slider{
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #dfe6f0;
+    border-radius: 50px;
+    transition: background-color 0.2s ease-in-out;
+
+}
+.slider-toggle__slider::before{
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+.slider-toggle__input:checked + .slider-toggle__slider{
+    background-color: #005dff;
+}
+.slider-toggle__input:checked + .slider-toggle__slider::before{
+    transform: translateX(30px);
+}
+
+@media (orientation: portrait) {
+    .progress-app {
+      flex-direction: column;
+    }
+}
+@media (orientation: landscape) {
+    .progress-app {
+      flex-direction: row;
+    }
 }

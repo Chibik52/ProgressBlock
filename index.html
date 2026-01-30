@@ -5,8 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progress</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="progress-app">
+        <div class="progress-container">
+            <span class="ubuntu-medium">Progress</span>
+            <div id="progressBarWrapper"></div>
+        </div>
+        <div class="controls">
+            <label class="control">
+                <input type="number" min="0" max="100" placeholder="0 - 100" id="valueInput" class="ubuntu-medium">
+                <span class="ubuntu-medium">Value</span>
+            </label>
+            
+            <label class="control slider-toggle">
+                <input type="checkbox" class="slider-toggle__input" id="animateToggle">
+                <span class="slider-toggle__slider"></span>
+                <span class="ubuntu-medium">Animate</span>
+            </label>
+            
+            <label class="control slider-toggle">
+                <input type="checkbox" class="slider-toggle__input" id="hideToggle">
+                <span class="slider-toggle__slider"></span>
+                <span class="ubuntu-medium">Hide</span>
+            </label>
+        </div>
+    </div>
     <script src="progress.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
