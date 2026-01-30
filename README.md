@@ -1,7 +1,8 @@
 Progress block
 =
 Блок, отображающий прогресс в виде круга.
-<br>
+
+Demo: https://chibik52.github.io/ProgressBlock/
 
 Установка
 -
